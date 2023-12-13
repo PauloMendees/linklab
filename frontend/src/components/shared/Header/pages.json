@@ -1,0 +1,27 @@
+[
+    {
+        "name": "Início",
+        "href": "/"
+    },
+    {
+        "name": "Produtos",
+        "href": "/",
+        "hasDropdown": true
+    },
+    {
+        "name": "Laudos",
+        "href": "/"
+    },
+    {
+        "name": "Sobre nós",
+        "href": "/"
+    },
+    {
+        "name": "Certificações",
+        "href": "/"
+    },
+    {
+        "name": "Contato",
+        "href": "/"
+    }
+]

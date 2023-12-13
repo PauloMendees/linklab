@@ -1,0 +1,63 @@
+@import "../../../../theme/variables.scss";
+
+.logo {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: $maxWidthContainer;
+}
+
+.main-header-elements {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.75rem 0rem;
+}
+
+.nav-container-desktop {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+}
+
+.nav-items {
+    max-width: fit-content;
+    color: $text;
+    font-weight: 400;
+    font-size: 16px;
+    text-decoration: none;
+    transition-duration: 200ms;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    padding: 0px;
+}
+
+.nav-items:hover {
+    color: $orange;
+}
+
+.arrow-icon-close {
+    transform: rotate(180deg);
+}
+
+.arrow-icon-open {
+    transform: rotate(0deg);
+}
+
+@media (max-width: 1024px) {
+    .header-container {
+        display: none !important;
+    }
+}

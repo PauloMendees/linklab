@@ -1,9 +1,14 @@
-import styles from './page.module.scss'
-
 export default function Home() {
   return (
-    <main className={styles.main}>
-      blank project
+    <main>
+      <div>teste</div>
+      <div>teste</div>
+      <div>teste</div>
+      <div>teste</div>
+      <div>teste</div>
+      <div>teste</div>
+      <div>teste</div>
+      <div>teste</div>
     </main>
-  )
+  );
 }
