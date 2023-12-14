@@ -1,6 +1,12 @@
+@import '../theme/variables.scss';
+
 .home-container {
     width: 100%;
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
 }
 
 .big-point-lines {
@@ -12,15 +18,31 @@
 .made-with-sciente-desktop {
     position: absolute;
     left: 47px;
-    top: 280px
+    top: 280px;
 }
 
+.category-cards-container {
+    display: flex;
+    align-items: start;
+    width: 100%;
+    max-width: $maxWidthContainer;
+}
+
+
 @media (max-width: 1024px) {
+    .home-container {
+        padding-top: 112px;
+    }
+
     .big-point-lines {
         display: none;
     }
 
     .made-with-sciente-desktop {
         display: none;
+    }
+
+    .category-cards-container {
+        flex-direction: column;
     }
 }
