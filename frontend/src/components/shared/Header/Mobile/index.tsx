@@ -5,12 +5,13 @@ import './styles.scss';
 import { Budget } from '@/assets/icons/Budget';
 import { IconButton } from '../../IconButton';
 import { Menu } from '@/assets/icons/Menu';
-import { useState } from 'react';
 import { Dropdown } from './components/Dropdown';
+import { useAppDispatch, useAppSelector } from '@/hooks/redux';
+import { toggle } from '../slice';
 
 export const MobileHeader = () => {
-  const [openMenu, setOpenMenu] = useState<boolean>(false);
-  const toggleMenu = () => setOpenMenu((state) => !state);
+  const openDropdown = useAppSelector((state) => state.header);
+  const dispatch = useAppDispatch();
 
   return (
     <>
@@ -22,10 +23,15 @@ export const MobileHeader = () => {
         </nav>
         <div className="buttons-container">
           <IconButton icon={<Budget width="22" height="22" />} />
-          <IconButton onClick={toggleMenu} noPadding scheme="transparent" icon={<Menu />} />
+          <IconButton
+            onClick={() => dispatch(toggle())}
+            noPadding
+            scheme="transparent"
+            icon={<Menu />}
+          />
         </div>
       </header>
-      <Dropdown open={openMenu} />
+      <Dropdown open={openDropdown} />
     </>
   );
 };

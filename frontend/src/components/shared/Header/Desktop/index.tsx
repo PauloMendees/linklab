@@ -7,11 +7,12 @@ import { ShorArrow } from '@/assets/icons/ShortArrow';
 import { Button } from '../../Button';
 import { Budget } from '@/assets/icons/Budget';
 import { ProductsDropdown } from './components/ProductsDropdown';
-import { useState } from 'react';
+import { useAppDispatch, useAppSelector } from '@/hooks/redux';
+import { toggle } from '../slice';
 
 export const DesktopHeader = () => {
-  const [openDropdown, setOpenDropdown] = useState(false);
-  const toggleDropdown = () => setOpenDropdown((state) => !state);
+  const openDropdown = useAppSelector((state) => state.header);
+  const dispatch = useAppDispatch();
 
   return (
     <header className="header-container">
@@ -22,7 +23,7 @@ export const DesktopHeader = () => {
           </h1>
           {pages.map((page) =>
             page.hasDropdown ? (
-              <button onClick={toggleDropdown} key={page.name} className="nav-items">
+              <button onClick={() => dispatch(toggle())} key={page.name} className="nav-items">
                 {page.name}
                 {page.hasDropdown && (
                   <ShorArrow className={openDropdown ? 'arrow-icon-open' : 'arrow-icon-close'} />
