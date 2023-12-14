@@ -1,0 +1,78 @@
+@import '../../../theme/variables.scss';
+
+.card-container {
+    flex: 1;
+    width: 100%;
+    background-color: $lowOrange;
+    color: $crossText;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+.accent {
+    background-color: $orange;
+    color: $text;
+}
+
+.card-category {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.label-container {
+    display: flex;
+    gap: 14px;
+}
+
+@media (min-width: 1024px) {
+    .label-container {
+        flex-direction: column;
+    }
+
+    .card-container {
+        height: 509px;
+        padding: 91px 72px 61px 72px;
+        flex-direction: column;
+    }
+
+    .accent {
+        height: 541px;
+        padding: 93px 72px 91px 72px;
+    }
+
+    .small-point-lines {
+        display: none;
+    }
+
+    .cart-label {
+        font-weight: 500;
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .label-container {
+        flex-direction: row;
+    }
+
+    .card-category {
+        display: none;
+    }
+
+    .card-container {
+        height: 115px;
+        flex-direction: row;
+        padding: 22px 35px;
+        align-items: center;
+    }
+
+    .small-point-lines {
+        display: block;
+    }
+
+    .cart-label {
+        font-weight: 400;
+        font-size: 19px;
+    }
+}
