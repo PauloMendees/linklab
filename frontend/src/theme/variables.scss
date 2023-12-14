@@ -1,6 +1,7 @@
 // ACCENT COLORS
 $orange: #F5643D;
 $blue: #84C4EA;
+$accentBlue: rgba(72, 199, 243, 1);
 
 // COMMON COLORS
 $crossBg: #323351;
@@ -27,4 +28,5 @@ $defaultContainerPadding: 34px;
     borderColor: $borderColor;
     maxWidthContainer: $maxWidthContainer;
     defaultContainerPadding: $defaultContainerPadding;
+    accentBlue: $accentBlue;
 }
