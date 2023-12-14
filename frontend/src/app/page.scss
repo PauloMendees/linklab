@@ -1,0 +1,26 @@
+.home-container {
+    width: 100%;
+    flex: 1;
+}
+
+.big-point-lines {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.made-with-sciente-desktop {
+    position: absolute;
+    left: 47px;
+    top: 280px
+}
+
+@media (max-width: 1024px) {
+    .big-point-lines {
+        display: none;
+    }
+
+    .made-with-sciente-desktop {
+        display: none;
+    }
+}
