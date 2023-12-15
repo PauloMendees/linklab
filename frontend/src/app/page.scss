@@ -21,11 +21,27 @@
     top: 280px;
 }
 
-.category-cards-container {
+.main-page-section {
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     width: 100%;
     max-width: $maxWidthContainer;
+    margin-bottom: 118px;
+}
+
+.products-title {
+    font-weight: 700;
+    font-size: 24px;
+    color: $crossText;
+    margin-bottom: 65px;
+}
+
+.products-section {
+    flex-direction: column;
+}
+
+.made-with-science-home {
+    display: none;
 }
 
 
@@ -42,7 +58,17 @@
         display: none;
     }
 
-    .category-cards-container {
+    .main-page-section {
         flex-direction: column;
+        margin-bottom: 31px;
+    }
+
+    .products-title {
+        margin-bottom: 40px;
+    }
+
+    .made-with-science-home {
+        display: block;
+        margin-top: 35px;
     }
 }

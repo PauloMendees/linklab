@@ -6,6 +6,7 @@ import { CategoryCard } from '@/components/home/CategoryCard';
 import { Glass } from '@/assets/icons/Glass';
 import { Bottles } from '@/assets/icons/Bottles';
 import { Frasks } from '@/assets/icons/Frasks';
+import { ProductList } from '@/components/home/ProductList';
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
       <BigPointLines className="big-point-lines" />
       <MadeWithScience className="made-with-sciente-desktop" />
       <MobileIntro />
-      <div className="category-cards-container">
+      <div className="main-page-section">
         <CategoryCard
           category="PRODUTO"
           icon={<Glass color="currentColor" width="32" height="32" />}
@@ -27,6 +28,11 @@ export default function Home() {
           label="Ferramentas e utensílios"
         />
       </div>
+      <div className="main-page-section products-section">
+        <h2 className="products-title">PRODUTOS</h2>
+        <ProductList />
+      </div>
+      <MadeWithScience className="made-with-science-home" />
     </main>
   );
 }
